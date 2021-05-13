@@ -23,3 +23,6 @@
   .login-main-container .form-group {
     width: 192px;
     height: 192px; }
+
+.profile-main-container {
+  background-color: #f2edd7; }
