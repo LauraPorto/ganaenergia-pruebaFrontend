@@ -1,0 +1,14 @@
+
+//variables y mixins
+@import './scss/mixins';
+@import './scss/variables';
+
+//componentes
+@import './components/Article/article';
+@import './components/Register/register';
+
+//views
+@import './views/Home/home';
+@import './views/Login/login';
+@import './views/Profile/profile';
+@import './views/Store/store';

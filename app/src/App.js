@@ -1,4 +1,5 @@
 import './App.css';
+import './css/main.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 //Rutas
