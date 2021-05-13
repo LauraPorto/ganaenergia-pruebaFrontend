@@ -1,0 +1,11 @@
+.register-main-conainer{
+    background-color: nth($palette, 2);
+
+    width: 20em;
+    height: 25em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}

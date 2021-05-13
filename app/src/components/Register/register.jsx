@@ -1,6 +1,39 @@
-import React from 'react'
+import React, {useState} from 'react';
+import {useHistory} from 'react-router-dom';
+import axios from 'axios';
 
 const Register = () => {
+
+    const history = useHistory();
+    
+    //Hooks
+    const [dataUser, setDataUser] = useState({
+        username: '',
+        email: '',
+        password: ''
+    });
+
+    const handleState = (event) => {
+        let data = { ...dataUser, [event.target.name]: event.target.value };
+        setDataUser(data);
+    };
+
+    const checkData = async () => {
+        console.log('estamos dentro de la función checkdata');
+
+        try{
+            const result = await axios.post('http://localhost:3002/user/', dataUser);
+            console.log(result, 'resultado de login');
+            alert('User registered successfully');
+            // return setTimeout(() => {
+            //     history.push('/home');
+            // }, 300);
+        }catch{
+            console.log('Email or user incorrect !')
+        };
+        
+    };
+
     return (
 
         <div className='register-main-conainer'>
