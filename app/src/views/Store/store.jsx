@@ -28,7 +28,7 @@ const Store = () => {
                 <Article/>
             </div>
             <div className="store-articles">
-                <button onClick={() => getArticles()}></button>
+                <button onClick={() => getArticles()}>GET ALL ARTICLES</button>
                 <div className="map-articles">
                     {
                         allArticles.map(article => 

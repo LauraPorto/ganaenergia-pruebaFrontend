@@ -5,4 +5,7 @@
     width: $mp-s;
     height: $mp-t;
     
+    button{
+        @include btnSesion
+    }
 };
