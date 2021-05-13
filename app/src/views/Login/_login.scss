@@ -1,8 +1,8 @@
 .login-main-container {
-    background-color: nth($palette, 2);
+    background-color: nth($palette, 1);
 
-    .form-group{
-        width: $mp-s;
-        height: $mp-s;
-    }
-}
+    
+    width: $mp-s;
+    height: $mp-t;
+    
+};

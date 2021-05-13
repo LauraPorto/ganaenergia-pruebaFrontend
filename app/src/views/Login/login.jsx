@@ -33,7 +33,7 @@ const Login = () => {
     };
 
     return (
-        <div className='login-main-conainer'>
+        <div className='login-main-container'>
             <form>
                 <div class="form-group">
                     <label for="email">Email</label>
