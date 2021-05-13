@@ -1,0 +1,19 @@
+@mixin btnSesion ($background-color: transparent, $colorHover: nth($palette, 3)){
+    width: 9em;
+    height: 2em;
+    background-color: $background-color;
+    transition: 0.7s;
+    border-radius: 0.2em;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color: nth($palette, 4);
+       
+    &:hover{
+        border-color: $colorHover;
+        border-radius: 0.3em;
+        transition: 0.7s;
+        width: 9.2em;
+        height: 2.2em;
+    }
+}
