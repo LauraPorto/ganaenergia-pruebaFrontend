@@ -10,9 +10,16 @@ const Profile = () => {
         const result = await axios.get('http://localhost:3002/user/');
         console.log(result, 'todos los usuarios');
         setAllUsers(result.data);
-        console.log(allUsers.users, 'seteo usuarios');
-
+        console.log(allUsers, 'allusers after set');
     };
+
+    const deleteUser = async ({user}) => {
+        const id = user._id;
+        const result = await axios.delete(`http://localhost:3002/user/${id}`);
+        console.log(result, 'esto es el resultado del borrado de usuario');
+        alert('User deleted successfully');
+        getUsers();
+    }
 
     return (
         <div className="profile-main-container">
@@ -32,8 +39,9 @@ const Profile = () => {
                                     {user.email}
                                 </div>
                                 <div className="map-id">
-                                    {user.id}
+                                    {user._id}
                                 </div>
+                                <button onClick={() => deleteUser({user})}>DELETE USER</button>
                             </div>
                             )
                     }
