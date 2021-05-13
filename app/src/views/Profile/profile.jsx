@@ -20,7 +20,7 @@ const Profile = () => {
         console.log(result, 'esto es el resultado del borrado de usuario');
         alert('User deleted successfully');
         getUsers();
-    }
+    };
 
     return (
         <div className="profile-main-container">
@@ -42,7 +42,7 @@ const Profile = () => {
                                 <div className="map-id">
                                     {user._id}
                                 </div>
-                                <button onClick={() => deleteUser({user})}>DELETE USER</button>
+                                <button className="delete-btn" onClick={() => deleteUser({user})}>DELETE USER</button>
                             </div>
                             )
                     }

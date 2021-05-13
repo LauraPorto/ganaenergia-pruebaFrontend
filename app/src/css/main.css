@@ -1,3 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Rasa:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Barlow+Semi+Condensed:ital,wght@1,600&family=Rasa:wght@300&display=swap");
+.article-main-container {
+  background-color: #3a6351;
+  width: 20em;
+  height: 25em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly; }
+  .article-main-container .button-create {
+    width: 9em;
+    height: 2em;
+    background-color: transparent;
+    transition: 0.7s;
+    border-radius: 0.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #393232; }
+    .article-main-container .button-create:hover {
+      border-color: #3a6351;
+      border-radius: 0.3em;
+      transition: 0.7s;
+      width: 9.2em;
+      height: 2.2em; }
+
 .register-main-conainer {
   background-color: #3a6351;
   width: 20em;
@@ -6,6 +33,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly; }
+  .register-main-conainer .button-register {
+    width: 9em;
+    height: 2em;
+    background-color: transparent;
+    transition: 0.7s;
+    border-radius: 0.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #393232; }
+    .register-main-conainer .button-register:hover {
+      border-color: #3a6351;
+      border-radius: 0.3em;
+      transition: 0.7s;
+      width: 9.2em;
+      height: 2.2em; }
 
 .home-main-conainer {
   background-color: #f2edd7;
@@ -20,24 +63,148 @@
 
 .login-main-container {
   background-color: #f2edd7;
-  width: 192px;
-  height: 224px; }
-  .login-main-container button {
-    width: 9em;
-    height: 2em;
-    background-color: transparent;
-    transition: 0.7s;
-    border-radius: 0.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh; }
+  .login-main-container .title-login {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 4em; }
+  .login-main-container .form-container {
+    width: 320px;
+    height: 320px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: #393232; }
-    .login-main-container button:hover {
-      border-color: #e48257;
-      border-radius: 0.3em;
+    justify-content: space-around;
+    font-family: "Rasa", serif;
+    font-size: 1.5em; }
+    .login-main-container .form-container button {
+      width: 9em;
+      height: 2em;
+      background-color: transparent;
       transition: 0.7s;
-      width: 9.2em;
-      height: 2.2em; }
+      border-radius: 0.2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #393232;
+      margin-top: 2em; }
+      .login-main-container .form-container button:hover {
+        border-color: #3a6351;
+        border-radius: 0.3em;
+        transition: 0.7s;
+        width: 9.2em;
+        height: 2.2em; }
 
 .profile-main-container {
-  background-color: #f2edd7; }
+  background-color: #f2edd7;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row; }
+  .profile-main-container .profile-register {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2em; }
+  .profile-main-container .profile-users {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2em;
+    font-family: "Rasa", serif;
+    font-size: 16px; }
+    .profile-main-container .profile-users button {
+      width: 9em;
+      height: 2em;
+      background-color: transparent;
+      transition: 0.7s;
+      border-radius: 0.2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #393232; }
+      .profile-main-container .profile-users button:hover {
+        border-color: #3a6351;
+        border-radius: 0.3em;
+        transition: 0.7s;
+        width: 9.2em;
+        height: 2.2em; }
+    .profile-main-container .profile-users .delete-btn {
+      width: 9em;
+      height: 2em;
+      background-color: transparent;
+      transition: 0.7s;
+      border-radius: 0.2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #393232; }
+      .profile-main-container .profile-users .delete-btn:hover {
+        border-color: #a51b1b;
+        border-radius: 0.3em;
+        transition: 0.7s;
+        width: 9.2em;
+        height: 2.2em; }
+
+.store-main-container {
+  background-color: #f2edd7;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row; }
+  .store-main-container .store-article-form {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2em; }
+  .store-main-container .store-articles {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2em;
+    font-family: "Rasa", serif;
+    font-size: 16px; }
+    .store-main-container .store-articles button {
+      width: 9em;
+      height: 2em;
+      background-color: transparent;
+      transition: 0.7s;
+      border-radius: 0.2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #393232; }
+      .store-main-container .store-articles button:hover {
+        border-color: #3a6351;
+        border-radius: 0.3em;
+        transition: 0.7s;
+        width: 9.2em;
+        height: 2.2em; }
+    .store-main-container .store-articles .delete-btn {
+      width: 9em;
+      height: 2em;
+      background-color: transparent;
+      transition: 0.7s;
+      border-radius: 0.2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #393232; }
+      .store-main-container .store-articles .delete-btn:hover {
+        border-color: #a51b1b;
+        border-radius: 0.3em;
+        transition: 0.7s;
+        width: 9.2em;
+        height: 2.2em; }

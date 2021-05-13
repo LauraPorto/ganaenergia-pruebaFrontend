@@ -1,11 +1,36 @@
 .login-main-container {
     background-color: nth($palette, 1);
 
-    
-    width: $mp-s;
-    height: $mp-t;
-    
-    button{
-        @include btnSesion
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: $maxWidth;
+    height: $maxHeight;
+   
+
+    .title-login{
+        font-family: $fontHeader;
+        font-size: 4em;
     }
+
+    .form-container{
+        width: $mp-w;
+        height: $mp-w;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        font-family: $fontBody;
+        font-size: 1.5em;
+
+        button{
+            @include btnSesion;
+            margin-top: 2em;
+        }
+    };
+    
+    
 };

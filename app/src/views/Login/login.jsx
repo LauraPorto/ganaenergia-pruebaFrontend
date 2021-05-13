@@ -34,20 +34,24 @@ const Login = () => {
 
     return (
         <div className='login-main-container'>
-            <form>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" className="form-control" id="email" aria-describedby="emailHelp" onChange={handleState}/>
-                    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" className="form-control" id="password" onChange={handleState}/>
-                </div>        
-            </form>
-            <div>
-                <button type='submit' onClick={() => checkData()} className='button-login'>LOGIN</button>
+            <div className="title-login">
+                <p>Welcome to your page !</p>
             </div>
+            <div className="form-container">
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" className="form-control" id="email" aria-describedby="emailHelp" onChange={handleState}/>
+                        <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" className="form-control" id="password" onChange={handleState}/>
+                    </div>    
+                    <button type='submit' onClick={() => checkData()} className='button-login'>LOGIN</button>
+                </form>
+            </div>
+
         </div>
     )
 }

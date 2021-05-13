@@ -1,0 +1,41 @@
+.store-main-container{
+    background-color: nth($palette, 1);
+    width: $maxWidth;
+    height: $maxHeight;
+
+    display: flex;
+    flex-direction: row;
+
+    .store-article-form{
+        height: $maxHeight;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 2em;
+    }
+
+    .store-articles {
+      
+
+        height: $maxHeight;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 2em;
+
+        font-family: $fontBody;
+        font-size: $mp-h;
+
+
+        button{
+            @include btnSesion;
+        }
+
+        .delete-btn{
+            @include btnSesion($colorHover: $danger)
+        }
+    }
+    
+};

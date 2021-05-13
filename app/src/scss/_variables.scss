@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Rasa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Barlow+Semi+Condensed:ital,wght@1,600&family=Rasa:wght@300&display=swap');
+
 //Colors 
 $palette: (#f2edd7, #3a6351, #e48257, #393232);
+
+$danger: rgb(165, 27, 27);
+
+//fonts
+$fontHeader: 'Barlow Condensed', sans-serif;
+$fontBody: 'Rasa', serif;
 
 //Tamaños
 $mp-a: 0px;

@@ -1,4 +1,4 @@
-@mixin btnSesion ($background-color: transparent, $colorHover: nth($palette, 3)){
+@mixin btnSesion ($background-color: transparent, $colorHover: nth($palette, 2)){
     width: 9em;
     height: 2em;
     background-color: $background-color;
@@ -16,4 +16,4 @@
         width: 9.2em;
         height: 2.2em;
     }
-}
+};

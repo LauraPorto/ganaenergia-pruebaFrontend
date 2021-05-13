@@ -39,7 +39,7 @@ const Store = () => {
                                 <div className="map-price">
                                     {article.price}
                                 </div>
-                                <button onClick={() => deleteArticle({article})}>DELETE ARTICLE</button>
+                                <button className="delete-btn" onClick={() => deleteArticle({article})}>DELETE ARTICLE</button>
                             </div>
                             
                             )
