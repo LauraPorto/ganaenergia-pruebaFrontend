@@ -1,4 +1,16 @@
 .home-main-conainer {
   background-color: #f2edd7;
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+  .home-main-conainer .home-icon-menu {
+    background-color: #f2edd7; }
+
+.login-main-container {
+  background-color: #f2edd7; }
+  .login-main-container .form-group {
+    width: 192px;
+    height: 192px; }
