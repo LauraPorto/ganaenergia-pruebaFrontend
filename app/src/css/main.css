@@ -3,7 +3,7 @@
 .article-main-container {
   background-color: #3a6351;
   width: 20em;
-  height: 25em;
+  height: 20em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +14,7 @@
     background-color: transparent;
     width: 320px; }
   .article-main-container .button-create {
-    width: 9em;
+    width: 10em;
     height: 2em;
     background-color: transparent;
     transition: 0.7s;
@@ -34,7 +34,7 @@
 .register-main-conainer {
   background-color: #3a6351;
   width: 20em;
-  height: 25em;
+  height: 20em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,7 +45,7 @@
     background-color: transparent;
     width: 320px; }
   .register-main-conainer button {
-    width: 9em;
+    width: 10em;
     height: 2em;
     background-color: transparent;
     transition: 0.7s;
@@ -101,8 +101,11 @@
     justify-content: space-around;
     font-family: "Rasa", serif;
     font-size: 1.5em; }
+    .login-main-container .form-container input {
+      width: 320px;
+      background-color: transparent; }
     .login-main-container .form-container button {
-      width: 9em;
+      width: 10em;
       height: 2em;
       background-color: transparent;
       transition: 0.7s;
@@ -150,7 +153,7 @@
       font-size: 20px;
       width: 25em; }
     .profile-main-container .profile-users button {
-      width: 9em;
+      width: 10em;
       height: 2em;
       background-color: #3a6351;
       transition: 0.7s;
@@ -169,21 +172,47 @@
         border-radius: 0.3em;
         transition: 0.7s;
         height: 2.2em; }
-    .profile-main-container .profile-users .delete-btn {
-      width: 9em;
-      height: 2em;
+    .profile-main-container .profile-users .input-profile {
       background-color: transparent;
-      transition: 0.7s;
-      border-radius: 0.2em;
+      border-color: transparent;
+      width: 320px; }
+      .profile-main-container .profile-users .input-profile :hover {
+        border-color: grey; }
+    .profile-main-container .profile-users .btns {
       display: flex;
-      align-items: center;
+      flex-direction: row;
       justify-content: center;
-      color: #393232; }
-      .profile-main-container .profile-users .delete-btn:hover {
-        border-color: #a51b1b;
-        border-radius: 0.3em;
+      width: 30em; }
+      .profile-main-container .profile-users .btns .delete-btn {
+        width: 20em;
+        height: 2em;
+        background-color: transparent;
         transition: 0.7s;
-        height: 2.2em; }
+        border-radius: 0.2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #393232; }
+        .profile-main-container .profile-users .btns .delete-btn:hover {
+          border-color: #a51b1b;
+          border-radius: 0.3em;
+          transition: 0.7s;
+          height: 2.2em; }
+      .profile-main-container .profile-users .btns .update-btn {
+        width: 20em;
+        height: 2em;
+        background-color: transparent;
+        transition: 0.7s;
+        border-radius: 0.2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #393232; }
+        .profile-main-container .profile-users .btns .update-btn:hover {
+          border-color: #3a6351;
+          border-radius: 0.3em;
+          transition: 0.7s;
+          height: 2.2em; }
 
 .store-main-container {
   background-color: #f2edd7;
@@ -216,8 +245,14 @@
     .store-main-container .store-articles .map-articles {
       font-size: 20px;
       width: 25em; }
+      .store-main-container .store-articles .map-articles .input-article {
+        background-color: transparent;
+        border-color: transparent;
+        width: 320px; }
+        .store-main-container .store-articles .map-articles .input-article :hover {
+          border-color: grey; }
     .store-main-container .store-articles button {
-      width: 9em;
+      width: 10em;
       height: 2em;
       background-color: #3a6351;
       transition: 0.7s;
@@ -236,18 +271,38 @@
         border-radius: 0.3em;
         transition: 0.7s;
         height: 2.2em; }
-    .store-main-container .store-articles .delete-btn {
-      width: 9em;
-      height: 2em;
-      background-color: transparent;
-      transition: 0.7s;
-      border-radius: 0.2em;
+    .store-main-container .store-articles .btns {
       display: flex;
-      align-items: center;
+      flex-direction: row;
       justify-content: center;
-      color: #393232; }
-      .store-main-container .store-articles .delete-btn:hover {
-        border-color: #a51b1b;
-        border-radius: 0.3em;
+      width: 30em; }
+      .store-main-container .store-articles .btns .delete-btn {
+        width: 20em;
+        height: 2em;
+        background-color: transparent;
         transition: 0.7s;
-        height: 2.2em; }
+        border-radius: 0.2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #393232; }
+        .store-main-container .store-articles .btns .delete-btn:hover {
+          border-color: #a51b1b;
+          border-radius: 0.3em;
+          transition: 0.7s;
+          height: 2.2em; }
+      .store-main-container .store-articles .btns .update-btn {
+        width: 20em;
+        height: 2em;
+        background-color: transparent;
+        transition: 0.7s;
+        border-radius: 0.2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #393232; }
+        .store-main-container .store-articles .btns .update-btn:hover {
+          border-color: #3a6351;
+          border-radius: 0.3em;
+          transition: 0.7s;
+          height: 2.2em; }

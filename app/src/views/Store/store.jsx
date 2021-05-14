@@ -11,17 +11,27 @@ const Store = () => {
 
     const getArticles = async () => {
         const result = await axios.get('http://localhost:3002/article/');
-        console.log(result, 'article resultados');
         setAllArticles(result.data);
-        console.log(allArticles, 'allarticles after set');
     };
 
     const deleteArticle = async ({article}) => {
         const id = article._id;
-        const result = await axios.delete(`http://localhost:3002/article/${id}`);
-        console.log(result, 'result de delete');
+        await axios.delete(`http://localhost:3002/article/${id}`);
         alert('Article deleted successfully !');
         getArticles();
+    };
+
+
+    const updateArticle = async (id) => {
+
+        try{
+            await axios.put(`http://localhost:3002/article/${id}`);
+            alert('Article updated successfully');
+        }catch{
+            alert('Something is wrong with your article. Review please !')
+        };
+        getArticles();
+        
     };
 
     return (
@@ -39,12 +49,19 @@ const Store = () => {
                         allArticles.map(article => 
                             <div className="map-allarticles">
                                 <div className="map-name">
-                                    Name : {article.name}
+                                    Name : 
+                                    <input name='username' className ="input-article" placeholder={article.name}></input>
                                 </div>
                                 <div className="map-price">
-                                    Price : {article.price}
+                                    Price : 
+                                    Id : 
+                                    <input name='username' className ="input-article" placeholder={article.price}></input>
                                 </div>
-                                <button className="delete-btn" onClick={() => deleteArticle({article})}>DELETE ARTICLE</button>
+                                <div className="btns">
+                                    <button className="delete-btn" onClick={() => deleteArticle({article})}>DELETE ARTICLE</button>
+                                    <button type='button' onClick={() => updateArticle(article._id)} className='update-btn'>UPDATE USER</button>
+                                </div>
+                                
                             </div>
                             
                             )

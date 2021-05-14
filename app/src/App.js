@@ -3,8 +3,9 @@ import './css/main.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 //Rutas
-import Home from './views/Home/home';
+
 import Login from './views/Login/login';
+import Home from './views/Home/home';
 import Profile from './views/Profile/profile';
 import Store from './views/Store/store';
 

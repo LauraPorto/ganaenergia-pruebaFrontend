@@ -11,16 +11,24 @@ const Profile = () => {
 
     const getUsers = async () => {
         const result = await axios.get('http://localhost:3002/user/');
-        console.log(result, 'todos los usuarios');
         setAllUsers(result.data);
-        console.log(allUsers, 'allusers after set');
     };
 
     const deleteUser = async ({user}) => {
         const id = user._id;
-        const result = await axios.delete(`http://localhost:3002/user/${id}`);
-        console.log(result, 'esto es el resultado del borrado de usuario');
+        await axios.delete(`http://localhost:3002/user/${id}`);
         alert('User deleted successfully');
+        getUsers();
+    };
+
+    const updateUser = async (id) => {
+
+        try{
+            await axios.put(`http://localhost:3002/user/${id}`);
+            alert('User registered successfully');
+        }catch{
+            alert('Email or user incorrect !')
+        };
         getUsers();
     };
 
@@ -37,17 +45,24 @@ const Profile = () => {
                 <div className="map-users">
                     {
                         allUsers.map(user => 
-                            <div className="map-allusers">
+                            <div className="map-allusers" key={user._id}>
                                 <div className="map-username">
-                                    Username : {user.username}
+                                    Username : 
+                                    <input className ="input-profile" name='username' placeholder={user.username}></input>
                                 </div>
                                 <div className="map-email">
-                                    Email : {user.email}
+                                    Email : 
+                                    <input name='username' className ="input-profile" placeholder={user.email}></input>
                                 </div>
                                 <div className="map-id">
-                                    Id : {user._id}
+                                    Id : 
+                                    <input name='username' className ="input-profile" placeholder={user._id}></input>
                                 </div>
-                                <button className="delete-btn" onClick={() => deleteUser({user})}>DELETE USER</button>
+                                <div className="btns">
+                                    <button className="delete-btn" onClick={() => deleteUser({user})}>DELETE USER</button>
+                                    <button type='submit' onClick={() => updateUser(user._id)} className='update-btn'>UPDATE USER</button>
+                                </div>
+                                
                             </div>
                             )
                     }

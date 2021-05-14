@@ -39,6 +39,17 @@
         .map-articles{
             font-size: $mp-i;
             width: 25em;
+
+
+            .input-article {
+                background-color: transparent;
+                border-color: transparent;
+                width: $mp-w;
+
+                :hover{
+                    border-color: grey;
+                }
+            }
         }
 
 
@@ -51,9 +62,19 @@
             margin-bottom: 1em;
         }
 
+        .btns{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 30em;
 
-        .delete-btn{
-            @include btnSesion($colorHover: $danger)
+            .delete-btn{
+                @include btnSesion($colorHover: $danger, $width: 20em);
+            }
+            .update-btn{
+                @include btnSesion($colorHover: nth($palette, 2), $width: 20em);
+
+            }
         }
     }
     

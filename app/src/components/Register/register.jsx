@@ -1,16 +1,15 @@
 import React, {useState} from 'react';
-import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 
-const Register = (props) => {
+const Register = () => {
 
-    const history = useHistory();
-    console.log(props, 'this is props');
+
     //Hooks
     const [dataUser, setDataUser] = useState({
         username: '',
+        id: '',
         email: '',
-        password: ''
+        password: '',
     });
 
     const handleState = (event) => {
@@ -19,30 +18,16 @@ const Register = (props) => {
     };
 
     const checkData = async () => {
-        console.log('estamos dentro de la función checkdata');
 
         try{
-            const result = await axios.post('http://localhost:3002/user/', dataUser);
-            console.log(result, 'resultado de login');
+            await axios.post('http://localhost:3002/user/', dataUser);
             alert('User registered successfully');
         }catch{
-            console.log('Email or user incorrect !')
+            alert('Email or user incorrect !')
         };
         
     };
 
-    const updateData = async () => {
-        console.log('estamos dentro de la función updatedata');
-
-        try{
-            const result = await axios.put('http://localhost:3002/user/', dataUser);
-            console.log(result, 'resultado de login');
-            alert('User registered successfully');
-        }catch{
-            console.log('Email or user incorrect !')
-        };
-        
-    };
 
     return (
 
@@ -63,7 +48,6 @@ const Register = (props) => {
             </form>
             <div>
                 <button type='submit' onClick={() => checkData()} className='button-register'>REGISTER USER</button>
-                <button type='submit' onClick={() => updateData()} className='button-register'>UPDATE USER</button>
             </div>
         </div>
 

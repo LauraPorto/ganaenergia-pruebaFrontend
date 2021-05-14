@@ -26,6 +26,11 @@
         font-family: $fontBody;
         font-size: 1.5em;
 
+        input{
+            width: $mp-w;
+            background-color: transparent;
+        }
+
         button{
             @include btnSesion;
             margin-top: 2em;
