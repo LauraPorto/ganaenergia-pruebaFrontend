@@ -5,6 +5,8 @@ import axios from 'axios';
 
 const Store = () => {
 
+    const history = useHistory();
+
     const [allArticles, setAllArticles] = useState([]);
 
     const getArticles = async () => {
@@ -24,6 +26,9 @@ const Store = () => {
 
     return (
         <div className="store-main-container">
+            <div className="back" onClick={() => history.push('/home')}>
+                BACK
+            </div>
             <div className="store-article-form">
                 <Article/>
             </div>
@@ -34,10 +39,10 @@ const Store = () => {
                         allArticles.map(article => 
                             <div className="map-allarticles">
                                 <div className="map-name">
-                                    {article.name}
+                                    Name : {article.name}
                                 </div>
                                 <div className="map-price">
-                                    {article.price}
+                                    Price : {article.price}
                                 </div>
                                 <button className="delete-btn" onClick={() => deleteArticle({article})}>DELETE ARTICLE</button>
                             </div>

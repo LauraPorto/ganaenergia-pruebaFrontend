@@ -23,11 +23,9 @@ const Login = () => {
         try{
             const result = await axios.post('http://localhost:3002/user/login', dataLogin);
             console.log(result, 'resultado de login');
-            return setTimeout(() => {
-                history.push('/home');
-            }, 300);
+            history.push('/home');
         }catch{
-            console.log('Email or user incorrect !')
+            alert('Email or user incorrect !');
         };
         
     };

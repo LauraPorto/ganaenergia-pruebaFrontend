@@ -5,6 +5,8 @@ import axios from 'axios';
 
 const Profile = () => {
 
+    const history = useHistory();
+
     const [allUsers, setAllUsers] = useState([]);
 
     const getUsers = async () => {
@@ -24,23 +26,26 @@ const Profile = () => {
 
     return (
         <div className="profile-main-container">
+             <div className="back" onClick={() => history.push('/home')}>
+                BACK
+            </div>
             <div className="profile-register">
                 <Register/>
             </div>
             <div className="profile-users">
-                <button onClick={() => getUsers()}>ALL USERS</button>
+                <button className="btn-all" onClick={() => getUsers()}>ALL USERS</button>
                 <div className="map-users">
                     {
                         allUsers.map(user => 
                             <div className="map-allusers">
                                 <div className="map-username">
-                                    {user.username}
+                                    Username : {user.username}
                                 </div>
                                 <div className="map-email">
-                                    {user.email}
+                                    Email : {user.email}
                                 </div>
                                 <div className="map-id">
-                                    {user._id}
+                                    Id : {user._id}
                                 </div>
                                 <button className="delete-btn" onClick={() => deleteUser({user})}>DELETE USER</button>
                             </div>

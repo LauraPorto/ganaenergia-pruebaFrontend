@@ -7,7 +7,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  font-family: "Rasa", serif;
+  font-size: 20px; }
+  .article-main-container input {
+    background-color: transparent;
+    width: 320px; }
   .article-main-container .button-create {
     width: 9em;
     height: 2em;
@@ -17,12 +22,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #393232; }
+    color: #393232;
+    color: #f2edd7;
+    margin: 1em; }
     .article-main-container .button-create:hover {
       border-color: #3a6351;
       border-radius: 0.3em;
       transition: 0.7s;
-      width: 9.2em;
       height: 2.2em; }
 
 .register-main-conainer {
@@ -32,8 +38,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly; }
-  .register-main-conainer .button-register {
+  justify-content: space-evenly;
+  font-family: "Rasa", serif;
+  font-size: 20px; }
+  .register-main-conainer input {
+    background-color: transparent;
+    width: 320px; }
+  .register-main-conainer button {
     width: 9em;
     height: 2em;
     background-color: transparent;
@@ -42,12 +53,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #393232; }
-    .register-main-conainer .button-register:hover {
+    color: #393232;
+    color: #f2edd7;
+    margin: 1em; }
+    .register-main-conainer button:hover {
       border-color: #3a6351;
       border-radius: 0.3em;
       transition: 0.7s;
-      width: 9.2em;
       height: 2.2em; }
 
 .home-main-conainer {
@@ -59,7 +71,15 @@
   align-items: center;
   justify-content: center; }
   .home-main-conainer .home-icon-menu {
-    background-color: #f2edd7; }
+    background-color: #f2edd7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .home-main-conainer .home-icon-menu p {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 40px;
+      color: #e48257; }
 
 .login-main-container {
   background-color: #f2edd7;
@@ -96,7 +116,6 @@
         border-color: #3a6351;
         border-radius: 0.3em;
         transition: 0.7s;
-        width: 9.2em;
         height: 2.2em; }
 
 .profile-main-container {
@@ -105,6 +124,12 @@
   height: 100vh;
   display: flex;
   flex-direction: row; }
+  .profile-main-container .back {
+    font-size: 40px;
+    font-family: "Barlow Condensed", sans-serif;
+    color: #e48257;
+    margin: 1em;
+    cursor: pointer; }
   .profile-main-container .profile-register {
     height: 100vh;
     display: flex;
@@ -121,21 +146,28 @@
     margin-left: 2em;
     font-family: "Rasa", serif;
     font-size: 16px; }
+    .profile-main-container .profile-users .map-users {
+      font-size: 20px;
+      width: 25em; }
     .profile-main-container .profile-users button {
       width: 9em;
       height: 2em;
-      background-color: transparent;
+      background-color: #3a6351;
       transition: 0.7s;
       border-radius: 0.2em;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #393232; }
+      color: #393232;
+      color: #f2edd7;
+      font-size: 20px;
+      width: 25em;
+      margin-left: 7em;
+      margin-bottom: 1em; }
       .profile-main-container .profile-users button:hover {
         border-color: #3a6351;
         border-radius: 0.3em;
         transition: 0.7s;
-        width: 9.2em;
         height: 2.2em; }
     .profile-main-container .profile-users .delete-btn {
       width: 9em;
@@ -151,7 +183,6 @@
         border-color: #a51b1b;
         border-radius: 0.3em;
         transition: 0.7s;
-        width: 9.2em;
         height: 2.2em; }
 
 .store-main-container {
@@ -160,6 +191,12 @@
   height: 100vh;
   display: flex;
   flex-direction: row; }
+  .store-main-container .back {
+    font-size: 40px;
+    font-family: "Barlow Condensed", sans-serif;
+    color: #e48257;
+    margin: 1em;
+    cursor: pointer; }
   .store-main-container .store-article-form {
     height: 100vh;
     display: flex;
@@ -176,21 +213,28 @@
     margin-left: 2em;
     font-family: "Rasa", serif;
     font-size: 16px; }
+    .store-main-container .store-articles .map-articles {
+      font-size: 20px;
+      width: 25em; }
     .store-main-container .store-articles button {
       width: 9em;
       height: 2em;
-      background-color: transparent;
+      background-color: #3a6351;
       transition: 0.7s;
       border-radius: 0.2em;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #393232; }
+      color: #393232;
+      color: #f2edd7;
+      font-size: 20px;
+      width: 25em;
+      margin-left: 7em;
+      margin-bottom: 1em; }
       .store-main-container .store-articles button:hover {
         border-color: #3a6351;
         border-radius: 0.3em;
         transition: 0.7s;
-        width: 9.2em;
         height: 2.2em; }
     .store-main-container .store-articles .delete-btn {
       width: 9em;
@@ -206,5 +250,4 @@
         border-color: #a51b1b;
         border-radius: 0.3em;
         transition: 0.7s;
-        width: 9.2em;
         height: 2.2em; }

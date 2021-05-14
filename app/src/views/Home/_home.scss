@@ -10,5 +10,16 @@
 
     .home-icon-menu{
         background-color: nth($palette, 1);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p{
+            font-family: $fontHeader;
+            font-size: $mp-l;
+            color: nth($palette, 3);
+        }
     }
 }

@@ -25,30 +25,24 @@ const Register = (props) => {
             const result = await axios.post('http://localhost:3002/user/', dataUser);
             console.log(result, 'resultado de login');
             alert('User registered successfully');
-            // return setTimeout(() => {
-            //     history.push('/home');
-            // }, 300);
         }catch{
             console.log('Email or user incorrect !')
         };
         
     };
 
-    // const updateData = async () => {
-    //     console.log('estamos dentro de la función updatedata');
+    const updateData = async () => {
+        console.log('estamos dentro de la función updatedata');
 
-    //     try{
-    //         const result = await axios.put('http://localhost:3002/user/', dataUser);
-    //         console.log(result, 'resultado de login');
-    //         alert('User registered successfully');
-    //         // return setTimeout(() => {
-    //         //     history.push('/home');
-    //         // }, 300);
-    //     }catch{
-    //         console.log('Email or user incorrect !')
-    //     };
+        try{
+            const result = await axios.put('http://localhost:3002/user/', dataUser);
+            console.log(result, 'resultado de login');
+            alert('User registered successfully');
+        }catch{
+            console.log('Email or user incorrect !')
+        };
         
-    // };
+    };
 
     return (
 
@@ -57,12 +51,10 @@ const Register = (props) => {
                 <div class="form-group">
                     <label for="email">Username</label>
                     <input type="username" name="username" class="form-control" id="email" aria-describedby="emailHelp" onChange={handleState}/>
-                    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" name="email" className="form-control" id="email" aria-describedby="emailHelp" onChange={handleState}/>
-                    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
@@ -71,7 +63,7 @@ const Register = (props) => {
             </form>
             <div>
                 <button type='submit' onClick={() => checkData()} className='button-register'>REGISTER USER</button>
-                {/* <button type='submit' onClick={() => updateData()} className='button-register'>UPDATE USER</button> */}
+                <button type='submit' onClick={() => updateData()} className='button-register'>UPDATE USER</button>
             </div>
         </div>
 

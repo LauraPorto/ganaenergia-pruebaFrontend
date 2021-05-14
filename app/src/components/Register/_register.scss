@@ -9,8 +9,17 @@
     align-items: center;
     justify-content: space-evenly;
 
+    font-family: $fontBody;
+    font-size: $mp-i;
 
-    .button-register{
+    input {
+        background-color: transparent;
+        width: $mp-w;
+    }
+
+    button {
         @include btnSesion;
+        color: nth($palette, 1);
+        margin: 1em;
     }
 }
